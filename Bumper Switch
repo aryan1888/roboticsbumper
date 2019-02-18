@@ -1,0 +1,31 @@
+task main()
+{
+while (1==1)
+{
+motor[rightmotor] = 42;
+motor[leftmotor] = 114;
+
+
+if(SensorValue(bumper) == 1)
+{
+motor[rightmotor] = 0;
+motor[leftmotor] = 0;
+wait1Msec(500);
+
+motor[rightmotor] = -42;
+motor[leftmotor] = -114;
+wait1Msec(1000);
+
+motor[rightmotor] = -42;
+motor[leftmotor] = 114;
+wait1Msec(550);
+
+motor[rightmotor] = 0;
+motor[leftmotor] = 0;
+wait1Msec(500);
+
+motor[rightmotor] = 42;
+motor[leftmotor] = 114;
+wait1Msec(1000);
+}
+}}
